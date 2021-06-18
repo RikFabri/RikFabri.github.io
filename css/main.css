@@ -40,3 +40,30 @@ body, html {
     padding: 1rem;
     box-shadow: 0px -6px var(--accent-colour), 2px 2px 10px var(--important-colour);
 }
+
+.navbar {
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: var(--important-colour);
+    font-size: 1.2rem;
+    font-weight: 110%;
+}
+
+.navbar a:nth-child(even) {
+    border-left: solid var(--main-colour);
+    border-right: solid var(--main-colour);
+    padding-left: 0.4rem;
+    padding-right: 0.4rem;   
+}
+
+.jumpAnchor {
+    position: relative;
+    visibility: hidden;
+    bottom: 8rem;
+}
