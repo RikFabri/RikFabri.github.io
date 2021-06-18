@@ -111,7 +111,10 @@ footer {
 }
 
 h2::after {
-    content: "__";
     display: block;
-    transform: translateY(-1.5rem);
+    content: "";
+    background-color: black;
+    width: 2rem;
+    height: 0.15rem;
+    margin-bottom: 1rem;
 }
