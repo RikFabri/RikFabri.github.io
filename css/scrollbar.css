@@ -1,0 +1,18 @@
+/* Works on Firefox */
+* {
+    scrollbar-width: 12px;
+    scrollbar-color: var(--interactable-colour) var(--important-colour);
+  }
+  
+  /* Works on Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+  *::-webkit-scrollbar-track {
+    background: var(--important-colour);
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background-color: var(--interactable-colour);
+  }
