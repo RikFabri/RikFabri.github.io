@@ -3,16 +3,22 @@
     margin: 0;
 } 
  
+a {
+    text-decoration: none;
+    color: var(--interactable-colour);
+}
+
 :root {
     --main-colour: #C3E0E5;
     --important-colour: #274472;
     --interactable-colour: #5885AF;
     --accent-colour: #41729F;
+    --background-colour: white;
 }
 
 body, html {
     height: 100%;
-    background-color: white;
+    background-color: var(--background-colour);
 }
 
 .parallax {
@@ -20,7 +26,7 @@ body, html {
     background-image: url("../Images/CitySceneWireFrame.png");
 
     /* Full height */
-    height: 50%;
+    min-height: 60%;
 
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
@@ -30,12 +36,12 @@ body, html {
 }
 
 .header {
-    text-align: center;    
+    text-align: center;
 }
 
 .container {
-    background-color: white;
-    padding: 1rem;
+    background-color: var(--background-colour);
+    padding: 2rem;
     box-shadow: 0px -6px var(--accent-colour), 0px 2px 10px var(--important-colour);
 }
 
@@ -44,6 +50,7 @@ body, html {
     width: 100%;
     position: fixed;
     top: 0;
+    padding: 1rem;
 }
 
 .navbar a {
@@ -75,4 +82,20 @@ footer {
 
 .ContactLogo {
     width: 6%;
+}
+
+.horizontalContent {
+    display: grid;
+    grid-template-columns: 2fr 10fr;
+}
+
+@media only screen and (max-width: 600px) {
+    .horizontalContent {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+}
+
+.horizontalContent * {
+    flex: 1 1;
 }
