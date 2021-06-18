@@ -10,10 +10,10 @@
     <body>
 		<div class="navbar container">
 			<a href="#AboutMe">About me</a>
-			<a href="#about">Resume</a>
+			<a href="#Contact">Contact</a>
 			<a href="#about">Something</a>
 		</div>
-		<div class="parallax">
+		<div class="parallax" style="padding-top: 30vh;">
 			<header>
 				<div class="header container">
 					<h1>I'm Rik</h1>
@@ -21,11 +21,30 @@
 				</div>
 			</header>
 		</div>
-		<div class="container" style="height: 200vh;">
-			<div id="AboutMe" class="jumpAnchor"></div>
-			<h3>About me</h3>
-			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga harum neque quisquam soluta ipsa voluptatem qui sapiente magni commodi incidunt exercitationem dignissimos, dolorum blanditiis iusto inventore iure excepturi. Odio, magnam.</p>
+		<div class="parallax" style="background-image: url('Images/PropsWireFrame.png');">
+			<div class="container" style="height: 30vh;">
+				<div id="AboutMe" class="jumpAnchor"></div>
+				<h3>About me</h3>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga harum neque quisquam soluta ipsa voluptatem qui sapiente magni commodi incidunt exercitationem dignissimos, dolorum blanditiis iusto inventore iure excepturi. Odio, magnam.</p>
+			</div>
 		</div>
+		<div class="container">
+			<h3>Get in touch</h3>
+			<a href="https://www.linkedin.com/in/rik-fabri-4079221a3">
+				<img src="Images/LinkedIn.png" alt="linked in logo" class="ContactLogo">
+			</a>
+		</div>
+		<footer>
+			<div>
+				<p>
+					Copyright &copy 2021-<span id="year">2021</span> Rik Fabri. All rights reserved
+				</p>
+			</div>
+		</footer>
 
+		<!-- Display current year in copyright notice -->
+		<script>
+			document.getElementById("year").innerHTML = new Date().getUTCFullYear();
+		</script>
     </body>
 </html>
