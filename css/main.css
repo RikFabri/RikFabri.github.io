@@ -96,12 +96,20 @@ footer {
     grid-template-columns: 1fr 10fr;
     grid-template-rows: 1fr auto;
     align-items: center;
+    grid-template-areas: 
+    "image text"
+    "imgText .";
 }
 
 @media only screen and (max-width: 600px) {
     .horizontalContent {
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr;
+        grid-template-rows: 9fr 1fr 10fr;
+
+        grid-template-areas: 
+        "image"
+        "imgText"
+        "text";
     }
 }
 
