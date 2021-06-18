@@ -32,11 +32,11 @@ body, html {
 }
 
 .header {
-    text-align: center;
-    width: 100%;
+    text-align: center;    
+}
+
+.container {
     background-color: white;
     padding: 1rem;
-    box-shadow: -6px -6px var(--accent-colour), 2px 2px 10px var(--important-colour);
-    /* box-shadow: -6px -6px var(--accent-colour), 6px 6px var(--accent-colour); */
-
+    box-shadow: 0px -6px var(--accent-colour), 2px 2px 10px var(--important-colour);
 }
