@@ -142,6 +142,15 @@ h2::after {
     width: 100%;
 }
 
+@media only screen and (max-width: 600px) {
+    .ProjectCard {
+        display: block;
+    }
+    .ProjectCard img {
+        margin-bottom: 2rem;
+    }
+}
+
 .SoftwareList {
     display: flex;
     flex-wrap: wrap;
