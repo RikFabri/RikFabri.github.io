@@ -127,6 +127,12 @@ h2::after {
     margin-bottom: 1rem;
 }
 
+.SoftwareList {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+}
+
 .ProjectCard {
     display: grid;
 
@@ -149,9 +155,9 @@ h2::after {
     .ProjectCard img {
         margin-bottom: 2rem;
     }
-}
 
-.SoftwareList {
-    display: flex;
-    flex-wrap: wrap;
+    .SoftwareList {
+        grid-template-columns: 1fr;
+    }
+
 }
