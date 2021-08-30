@@ -151,7 +151,6 @@ h2::after {
 .SoftwarePopup
 {
     top: 80%;
-    display: block;
     visibility: hidden;
     position: absolute;
     width: 45%;
@@ -193,7 +192,9 @@ h2::after {
     .SoftwareList {
         grid-template-columns: 1fr;
     }
-    .SoftwarePopup {
+
+    .ProjectCard:hover .SoftwarePopup
+    {
         display: none;
     }
 }
