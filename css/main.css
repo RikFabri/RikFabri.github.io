@@ -148,6 +148,40 @@ h2::after {
     width: 100%;
 }
 
+.SoftwarePopup
+{
+    top: 80%;
+    display: block;
+    visibility: hidden;
+    position: absolute;
+    width: 45%;
+    margin-top: 20px;
+    background-color: rgb(46, 53, 53);
+    border-radius: 8px;
+    padding: 1rem;
+    transition: opacity 600ms, visibility 600ms;
+    opacity: 0;
+}
+
+.SoftwarePopup::before
+{
+    content: '▲';
+    font-size: 2em;
+
+    text-align: center;
+    margin-top: -40px;
+    display: block;
+ 
+    color:  rgb(46, 53, 53);
+}
+
+.ProjectCard:hover .SoftwarePopup
+{
+    display: block;
+    visibility: visible;
+    opacity: 1;
+}
+
 @media only screen and (max-width: 600px) {
     .ProjectCard {
         display: block;
@@ -159,5 +193,7 @@ h2::after {
     .SoftwareList {
         grid-template-columns: 1fr;
     }
-
+    .SoftwarePopup {
+        display: none;
+    }
 }
