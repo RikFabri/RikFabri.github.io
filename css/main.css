@@ -197,12 +197,12 @@ h2::after {
 @media only screen and (max-width: 600px) {
     .ProjectCard {
         display: block;
-        background-color: white;
+        background-color: var(--background-colour);
     }
 
     .ProjectCard:hover
     {
-        background-color: white;
+        background-color: var(--background-colour);
     }
 
     .ProjectCard img {
