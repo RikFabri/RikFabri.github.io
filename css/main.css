@@ -27,7 +27,7 @@ body, html {
     background-image: url("../Images/CitySceneWireFrame.png");
 
     /* Full height */
-    min-height: 60%;
+    min-height: 38%;
 
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
@@ -80,7 +80,6 @@ body, html {
 }
 
 footer {
-    font-size: 1.3rem;
     padding: 3rem;
     height: 10vh;
     background-color: var(--accent-colour);
@@ -98,6 +97,7 @@ footer {
 .contactSection a
 {
     background-color: aliceblue;
+    border-radius: 5px;
     
     display: flex;
     align-content: flex-end;
@@ -114,7 +114,7 @@ footer {
     border-radius: 5px;
     width: 6%;
     object-fit: cover;
-    margin-right: 3rem;
+    margin-right: 2rem;
 
 }
 
@@ -207,7 +207,9 @@ h2::after {
     font-size: 2em;
 
     text-align: center;
-    margin-top: -33px;
+    /* margin-top: -33px; */
+    line-height: 0px;
+    top: -0.4em;
     display: block;
  
     color:  var(--popup-colour);
@@ -250,6 +252,6 @@ h2::after {
 
     .contactSection a img
     {
-        width: 20%;
+        width: 14vw;
     }
 }
