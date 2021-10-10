@@ -17,6 +17,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/scrollbar.css">
+	<link rel="stylesheet" href="css/gists.css">
+	<link rel="stylesheet" href="css/modal.css">
 	<link rel="shortcut icon" href="Images/Tomato.png" type="image/x-icon">
     <title>Rik Fabri</title>
 </head>
@@ -62,7 +64,7 @@
 							<img src="https://raw.githubusercontent.com/RikFabri/CHIP8-Emulator/main/ReadmeAssets/Chip8-woking.gif" alt="A gif of a working chip-8 emulator">
 						</div>
 					</a>
-					<a href="https://github.com/RikFabri/EasyTextures" class="ProjectCard" target="_blank" rel="noopener noreferrer">
+					<a onclick="OpenModalByid('etModal');" class="ProjectCard" target="_blank" rel="noopener noreferrer">
 						<img src="Images/EasyTextures.png" alt="Easy textures plugin cover" id="nox">
 						<p>
 							EasyTextures is a small <b>Maya script</b> that allows for applying textures by dragging them into Maya. It's written in <b>python</b> and <b>MEL</b>.
@@ -127,6 +129,109 @@
 				Copyright &copy 2021-<span id="year">2021</span> Rik Fabri. All rights reserved
 			</p>
 		</footer>
+
+		<!-- Chip-8 modal -->
+		<div class="modal" id="chipModal">
+			<div class="modal-content">
+				<div class="modal-header">
+					<a class="GithubButton" href="https://github.com/RikFabri/CHIP8-Emulator" target="_blank" rel="noopener noreferrer">View&nbspon&nbspGitHub</a>
+					<div></div>
+					<span class="modal-close">&times;</span>
+				</div>
+				<div class="modal-body">
+					<h1 class="underlined">Chip-8</h1>
+					<h3>Cmake</h3>
+					<h3>Emulation</h3>
+					<script src="https://gist.github.com/RikFabri/d598ca82845093856076134291835bca.js"></script>
+					<script src="https://gist.github.com/RikFabri/79a53d70f335ec25d0270812d0308af5.js"></script>
+					<h3>QT</h3>
+				</div>
+			</div>
+		</div>
+
+		<!-- Easy textures modal -->
+		<div class="modal" id="etModal">
+			<div class="modal-content">
+				<div class="modal-header">
+					<a class="GithubButton" href="https://github.com/RikFabri/EasyTextures" target="_blank" rel="noopener noreferrer">View&nbspon&nbspGitHub</a>
+					<div></div>
+					<span class="modal-close">&times;</span>
+				</div>
+				<div class="modal-body">
+					<h1 class="underlined">EasyTextures</h1>
+					<h3>Description</h3>
+					<p>
+						Easy textures is a small (2 files) plugin that allows users to drag and drop an image into Maya to use it as a texture. Much like the behaviour in 3dsMax.
+						Next to automatically creating and applying the shaders, the plugin also keeps track of the existing ones to prevent duplicates. 
+					</p><br>
+					<h3>Automating shaders</h3>
+					<p>The heart of the program is creating a shader, which I do like this:</p><br>
+					<script src="https://gist.github.com/RikFabri/baf08c6bf8d636b924e597af0ecafeb2.js"></script><br>
+					<h3>Drag and drop</h3>
+					<p>
+						We change the default drag and drop behaviour by overriding the "performFileDropAction" function.
+						I altered <a target="_blank" rel="noopener noreferrer" href="https://gist.github.com/Meatplowz/376d7483d557c47f2ef8bdf3023fdf16">Meatplowz' gist</a> 
+						for this and kept his implementation for the "open", "import" and "reference" buttons.
+						The following <u>condensed</u> code snippet shows the "apply texture" button that I added, and how I managed to execute my python script from MEL.
+					</p><br>
+					<script src="https://gist.github.com/RikFabri/342b316fd200c468bc7092aa7c36dfe6.js"></script>
+				</div>
+			</div>
+		</div>
+
+		<!-- Nox modal -->
+		<div class="modal" id="noxModal">
+			<div class="modal-content">
+				<div class="modal-header">
+					<a class="GithubButton" href="https://github.com/RikFabri/CHIP8-Emulator" target="_blank" rel="noopener noreferrer">View&nbspon&nbspItch.io</a>
+					<div></div>
+					<span class="modal-close">&times;</span>
+				</div>
+				<div class="modal-body">
+					<h1 class="underlined">NOX</h1>
+					<h3>Description</h3>
+					<p>Nox is a 2,5D atmospheric puzzle platform game set in an 80's arcade. Made for the DAE course "game projects".
+					</p><br>
+					<h3>Team</h3>
+					<p> 
+						We were a team of 2 programmers and 4 artists (Both me and the other programmer had no prior unreal C++ experience).
+						 Everyone put in around 80-100 hours.
+						I myself did most of the gameplay programming, including:
+					</p><br>
+					<ul>
+						<li>Pushing/Pulling</li>
+						<li>Spiderwebs that lock objects</li>
+						<li>Climbing</li>
+						<li>Ziplining</li>
+						<li>Rope splinemeshes</li>
+						<li>General purpose levers, easily extensible in blueprints for our level designers</li>
+						<li>Bossfight (generating leg movement through IK, spider-pushable and spider-player interactions)</li>
+						<li>...</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<!-- The crunch modal -->
+		<div class="modal" id="crunchModal">
+			<div class="modal-content">
+				<div class="modal-header">
+					<a class="GithubButton" href="https://github.com/RikFabri/CHIP8-Emulator" target="_blank" rel="noopener noreferrer">View&nbspon&nbspLDJam</a>
+					<div></div>
+					<span class="modal-close">&times;</span>
+				</div>
+				<div class="modal-body">
+					<h1 class="underlined">The Crunch</h1>
+					<h3>Game Jam</h3>
+					<p>
+						I made this game with a fiend for he Ludum Dare 42 game jam. This was before I 
+					</p><br>
+					<h3>Mistakes</h3>
+				</div>
+			</div>
+		</div>
+
+
 
 		<!-- Display current year in copyright notice -->
 		<script>
