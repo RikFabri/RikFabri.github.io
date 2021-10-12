@@ -77,15 +77,13 @@
 						<img src="Images/NoxCover.jpg" alt="Video game nox cover" id="nox">
 						<p>
 							<!-- Nox is a 2,5D atmospheric puzzle platform game set in an 80's arcade. It's made in unreal engine for one of our courses. I worked on this game together with 5 other DAE students over the course of a semester. -->
-							Nox is a 2,5D atmospheric puzzle platform game set in an 80's arcade, made for a DAE course. 
-							We used <b>unreal engine</b> (with <b>C++</b>) in a team with 2 programmers and 4 artists. Everyone put in around 80-100 hours.
-							I myself did most of the gameplay programming (interactions, the bossfight,..)
+							Nox is a 2,5D atmospheric puzzle platform game set in an 80's arcade, made in <b>unreal engine</b> (with <b>C++</b>) and version controlled by <b>perforce</b>.
 						</p>
 						<div class="SoftwarePopup">
 							<iframe style="border-radius: 5px;" width="100%" height="315" src="https://www.youtube-nocookie.com/embed/plOx-9IB80o?controls=0&autoplay=1&mute=1&playlist=plOx-9IB80o&loop=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
 						</div>
 					</a>
-					<a href="https://ldjam.com/events/ludum-dare/42/the-crunch" class="ProjectCard" target="_blank" rel="noopener noreferrer">
+					<a onclick="OpenModalByid('crunchModal')" class="ProjectCard" target="_blank" rel="noopener noreferrer">
 						<img src="Images/TheCrunch.png" alt="Game jam game cover" id="crunch">
 						<p>
 							This was the first game I ever publicly released. It was for the Ludum dare 42 <b>game jam</b>, a friend did the art and I did all the programming (in <b>C++</b>).
@@ -251,7 +249,10 @@
 		<div class="modal" id="crunchModal">
 			<div class="modal-content">
 				<div class="modal-header">
-					<a class="GithubButton" href="https://github.com/RikFabri/CHIP8-Emulator" target="_blank" rel="noopener noreferrer">View&nbspon&nbspLDJam</a>
+					<a class="GithubButton" href="https://ldjam.com/events/ludum-dare/42/the-crunch" target="_blank" rel="noopener noreferrer">View&nbspon&nbspLDJam</a>
+					<!-- <div style="display: grid; grid-template-columns: auto auto; grid-column-gap: 1rem;">
+						<a class="GithubButton" href="https://github.com/RikFabri/LD42" target="_blank" rel="noopener noreferrer">View&nbspon&nbspGitHub&nbsp(bad&nbspcode)</a>
+					</div> -->
 					<div></div>
 					<span class="modal-close">&times;</span>
 				</div>
@@ -259,9 +260,21 @@
 					<h1 class="underlined">The Crunch</h1>
 					<h3>Game Jam</h3>
 					<p>
-						I made this game with a fiend for he Ludum Dare 42 game jam. This was before I 
+						I made this game with a good friend for the <u>Ludum Dare 42 game jam</u>. This was before I started studying at DAE and even though I knew a decent amount about C++, the good practices were definitely not there.
 					</p><br>
 					<h3>Mistakes</h3>
+					<p>
+						There's so much wrong with the codebase that I can't possibly give you focused code snippets.
+						Restarting the game was an afterthought I fixed with a goto, causing the biggest memory leak imaginable.
+						I knew about constructors, but not about the initializer list and didn't use the destructor. So goodbye RAII principles and hello even more memory leaks!
+						The Spaceship's render method wasn't const and has a shocking amount of gameplay logic in there.
+						<br>The list goes on, really.<br>
+						(You can find the code via our LDJam page, but I won't link to it directly to prevent people from opening it without reading this.)
+					</p><br>
+					<h3>Conclusion</h3>
+					<p>I guess the reason this project is still on my portfolio is simply that it was my first "real" game, we did a pretty good game jam even though our skillset was lacking to say the least.
+						<br>It's also an indicator on how far I've come since then and a reminder of why I got into videogames.
+					</p>
 				</div>
 			</div>
 		</div>
