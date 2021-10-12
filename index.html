@@ -73,7 +73,7 @@
 							<img src="https://raw.githubusercontent.com/RikFabri/EasyTextures/1b04c226dc9a2faafde9069e88bb8c7cf6727f67/ReadmeAssets/EasyTextures.gif" alt="Gif of maya plugin working">
 						</div>
 					</a>
-					<a href="https://silkevdsmissen.itch.io/nox" class="ProjectCard" target="_blank" rel="noopener noreferrer">
+					<a onclick="OpenModalByid('noxModal');" class="ProjectCard" target="_blank" rel="noopener noreferrer">
 						<img src="Images/NoxCover.jpg" alt="Video game nox cover" id="nox">
 						<p>
 							<!-- Nox is a 2,5D atmospheric puzzle platform game set in an 80's arcade. It's made in unreal engine for one of our courses. I worked on this game together with 5 other DAE students over the course of a semester. -->
@@ -141,7 +141,7 @@
 				<div class="modal-body">
 					<h1 class="underlined">Chip-8</h1>
 					<p>
-						I wrote this <b>C++</b> CHIP-8 VM/interpreter because I wanted to experiment with <b>cmake</b>, <b>QT</b> and learn about emulator development. This project combines it all! 
+						I wrote this <u>C++</u> CHIP-8 VM/interpreter because I wanted to experiment with <u>cmake</u>, <u>QT</u> and learn about emulator development. This project combines it all! 
 						<br>The project is fully functional, except for sound. However, I'm doing my graduation work on gameboy sound and will probably add sound support here afterwards.
 					</p><br>
 					<h3>Emulation</h3>
@@ -223,7 +223,8 @@
 				<div class="modal-body">
 					<h1 class="underlined">NOX</h1>
 					<h3>Description</h3>
-					<p>Nox is a 2,5D atmospheric puzzle platform game set in an 80's arcade. Made for the DAE course "game projects".
+					<p>Nox is a 2,5D atmospheric puzzle platform game set in an 80's arcade. Made for the DAE course "game projects". Most of the codebase is written in <u>Unreal C++</u>, although we also used <u>blueprints</u> when that made more sense.
+						The entire project was under <u>perforce</u> version control.
 					</p><br>
 					<h3>Team</h3>
 					<p> 
@@ -237,6 +238,7 @@
 						<li>Climbing</li>
 						<li>Ziplining</li>
 						<li>Rope splinemeshes</li>
+						<li>Collectables base</li>
 						<li>General purpose levers, easily extensible in blueprints for our level designers</li>
 						<li>Bossfight (generating leg movement through IK, spider-pushable and spider-player interactions)</li>
 						<li>...</li>
