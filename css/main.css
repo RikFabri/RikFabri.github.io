@@ -211,6 +211,7 @@ h2::after,
 .ProjectCard:hover
 {
     background-color: #dfe8f0;
+    cursor: pointer;
 }
 
 .ProjectCard:hover .SoftwarePopup
