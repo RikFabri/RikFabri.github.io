@@ -55,7 +55,7 @@
 				<div id="SoftwareSection" class="jumpAnchor"></div>
 				<h2>Software</h2>
 				<div class="SoftwareList">
-					<a href="https://github.com/RikFabri/CHIP8-Emulator" class="ProjectCard" target="_blank" rel="noopener noreferrer">
+					<a onclick="OpenModalByid('chipModal')" class="ProjectCard" target="_blank" rel="noopener noreferrer">
 						<img src="Images/Chip-8.png" alt="Chip-8" id="chip8">
 						<p>
 							I wrote this <b>C++</b> CHIP-8 VM/interpreter because I wanted to experiment with <b>cmake</b>, <b>QT</b> and learn about <b>emulator</b> development. This project combines it all!
@@ -140,11 +140,44 @@
 				</div>
 				<div class="modal-body">
 					<h1 class="underlined">Chip-8</h1>
-					<h3>Cmake</h3>
+					<p>
+						I wrote this <b>C++</b> CHIP-8 VM/interpreter because I wanted to experiment with <b>cmake</b>, <b>QT</b> and learn about emulator development. This project combines it all! 
+						<br>The project is fully functional, except for sound. However, I'm doing my graduation work on gameboy sound and will probably add sound support here afterwards.
+					</p><br>
 					<h3>Emulation</h3>
+					<p>Opcodes are the heart of any emulator (or cpu). For Chip-8 each opcode is 2 bytes (big-endian) consisting of bits to identify the opcode and bits that contain data.
+						For example, "00EE" returns from a subroutine and "2NNN" calls a subroutine at whatever value "NNN" has. The following code is used to identify an opcode and know which function it relates to.
+					</p><br>
+					<script src="https://gist.github.com/RikFabri/6899d2ab4c45a2548e3b1fd191e25825.js"></script>
+					<p>We can then simply loop over a vector containing our OpcodeDetails and call the appropriate functions like this.</p><br>
 					<script src="https://gist.github.com/RikFabri/d598ca82845093856076134291835bca.js"></script>
+					<h3>Sprites</h3>
+					<p>Chip-8 has an interesting way of handling sprites and collisions. Drawing a sprite uses opcode "DXYN" which provides us with both the registers for the x and y coordinates and the height of the sprite (n).
+						To actually draw the sprite, we read a byte for each row in the sprite (n) at the memory address stored in I (this is a special 16bit register meant to store memory addresses).
+						Each bit represents whether or not a pixel is white. The pixel is then xor'ed onto the display, if an older pixel is unset, a collision flag is set for later use.
+						This way, we can draw sprites that are 8 pixels wide (1 byte) and n-rows long.
+						<br><br>
+						In the code snippet underneath, vm.Vx is the virtual machine's array of registers.
+					</p><br>
 					<script src="https://gist.github.com/RikFabri/79a53d70f335ec25d0270812d0308af5.js"></script>
 					<h3>QT</h3>
+					<p>
+						The hardest part of setting up QT for this project was figuring out how to render the emulator's viewport.
+						I tried opengl but eventually decided that was overkill and settled for the built-in QPainter class. 
+						In the end, I made a widget that inherits from QOpenGLWidget and overrides the paintEvent method like this.
+					</p><br>
+					<script src="https://gist.github.com/RikFabri/8e797231cbfd3731663d2733a485a22f.js"></script>
+					<h3>Cmake</h3>
+					<p>
+						The cmake for this project ended up being really simple. The CMakeLists for QT is almost entirely managed by QT creator.
+						The Chip-8 part is compiled as a stand-alone library like this.
+					</p><br>
+					<script src="https://gist.github.com/RikFabri/d2ee11056d7943566f73de4dc21178d2.js"></script>
+					<br>
+					<p>
+						We then tie together the project like this:
+					</p><br>
+					<script src="https://gist.github.com/RikFabri/a9d31ec725235e677f63e96a6e660405.js"></script>
 				</div>
 			</div>
 		</div>
