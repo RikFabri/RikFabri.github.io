@@ -101,6 +101,13 @@
 							game with <b>azure spatial anchors</b> and <b>MRTK</b> on android.
 						</p>
 					</a>
+					<a onclick="OpenModalByid('gbSoundModal')" class="ProjectCard" target="_blank" rel="noopener noreferrer">
+						<img src="Images/GameboySound.png" alt="Gameboy sound icon" id="gbSound">
+						<p>
+							<u><b>[WIP] Gameboy sound</b></u><br>
+							I'm currently researching how the gameboy played <b>sound</b> for my graduation work. The eventual goal is to add accurate sound to an existing gameboy emulator. 
+						</p>
+					</a>
 					<a href="WeekendProjects" class="ProjectCard" style="cursor: not-allowed; background-color: gainsboro;" onclick="return false;">
 						<img src="Images/WeekendProjectsIcon.png" alt="Weekend projects" id="WeekendProjects">
 						<p>
@@ -303,12 +310,34 @@
 					<h3>The team</h3>
 					<p>
 						We're a team of 3 programmers and 2 artists. Currently, my main responsibility (next to game design which we all do together) is everything <u>networking</u> related.
-						We're using Unity's new <u>MLAPI</u> for this.
+						We're using Unity's new <u>MLAPI</u> for this.<br>
+						I just ended up taking over the <u>spatial anchors</u> and managed to share AR objects, anchored in the real world, over multiple devices.
 					</p><br>
 				</div>
 			</div>
 		</div>
 
+		<!-- Gameboy sound modal -->
+		<div class="modal" id="gbSoundModal">
+			<div class="modal-content">
+				<div class="modal-header">
+					<div></div><div></div>
+					<span class="modal-close">&times;</span>
+				</div>
+				<div class="modal-body">
+					<h1 class="underlined">Gameboy sound [WIP]</h1>
+					<p>
+						I'm doing my graduation work on gameboy sound. The minimum goal is to have an emulator play sound. I'm still looking for a research question and interesting topics to explore later on. 
+						It might be interesting to hear how the music sounds when you apply more modern sound processing to the emulator for example.
+					</p><br>
+					<h3>Relevant topics</h3>
+					<p>
+						I can reuse what I learned from the chip-8 emulator to know which <u>opcodes</u> to add/implement. I'm also looking into how <u>PCM</u> works and how to play back generated waveforms through <u>SDL</u>.
+					</p><br>
+				</div>
+			</div>
+		</div>
+		
 
 
 		<!-- Display current year in copyright notice -->
