@@ -207,17 +207,22 @@ h2::after,
     color:  var(--popup-colour);
 }
 
-.ProjectCard:hover
-{
-    background-color: #dfe8f0;
-    cursor: pointer;
-}
-
 .ProjectCard:hover .SoftwarePopup
 {
     display: block;
     visibility: visible;
     opacity: 1;
+}
+
+.SoftwarePopup video
+{
+    width: 100%;
+}
+
+.ProjectCard:hover
+{
+    background-color: #dfe8f0;
+    cursor: pointer;
 }
 
 @media only screen and (max-width: 1300px) {
