@@ -238,6 +238,11 @@ h2::after,
     .ProjectCard {
         grid-template-columns: 20% auto 1rem;
     }
+
+    .ProjectCard:hover .SoftwarePopup
+    {
+        display: none;
+    }
 }
 
 @media only screen and (max-width: 600px) {
@@ -251,11 +256,6 @@ h2::after,
 
     .SoftwareList {
         grid-template-columns: 1fr;
-    }
-
-    .ProjectCard:hover .SoftwarePopup
-    {
-        display: none;
     }
 
     .contactSection a img
