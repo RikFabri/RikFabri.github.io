@@ -19,7 +19,7 @@
 	<link rel="stylesheet" href="css/scrollbar.css">
 	<link rel="stylesheet" href="css/gists.css">
 	<link rel="stylesheet" href="css/modal.css">
-	<link rel="stylesheet" href="popup.css">
+	<link rel="stylesheet" href="css/ToTVideos.css">
 	<link rel="shortcut icon" href="Images/Tomato.png" type="image/x-icon">
     <title>Rik Fabri</title>
 </head>
@@ -59,9 +59,8 @@
 					<a onclick="OpenModalByid('tarModal')" class="ProjectCard" target="_blank" rel="noopener noreferrer">
 						<img src="Images/TugOfTar_Logo_Opac.png" alt="Tug of tar game cover" id="tot">
 						<p>
-							<u><b>[WIP]</b></u><br>
-							Tug of tar is a group project I'm working on for a client. The goal is to figure out if we can make an <b>AR multiplayer</b>
-							game with <b>azure spatial anchors</b> and <b>MRTK</b> on android.<br> <b>Soon to be available on the play store!</b>
+							Tug of tar is a group project I worked on for a client. The goal was to figure out if we could make an <b>AR multiplayer</b>
+							game with <b>azure spatial anchors</b> and <b>MRTK</b> on <b>android</b>.<br>
 						</p>
 						<div class="SoftwarePopup">
 							<video src="Images/ToT.mp4" alt="A gameplay video" autoplay muted controls loop></video>
@@ -306,17 +305,25 @@
 					<span class="modal-close">&times;</span>
 				</div>
 				<div class="modal-body">
-					<h1 class="underlined">Tug of TAR [WIP]</h1>
+					<h1 class="underlined">Tug of TAR</h1>
 					<p>
-						Tug of tar is a work-in-progress game where people can place space stations in a shared AR-space to have epic battles over precious oil.<br>
-						We're using <u>Unity</u>, <u>MLAPI</u>, <u>Azure spatial anchors</u>, <u>MRTK</u> and version control everything with <u>perforce</u>.
+						Tug of Tar is a game where two people can place space stations in a shared AR-space to have epic battles over precious oil.<br>
+						We used the <u>Unity</u> engine, <u>MLAPI</u> (now called <u>Netcode for GameObjects</u>) for networking, <u>Azure spatial anchors</u> to synchronize our shared spaces, tested <u>MRTK</u> for our client and version controlled everything with <u>perforce</u>.
 					</p><br>
-					<h3>The team</h3>
+					<h3>The team and responsibilities</h3>
 					<p>
-						We're a team of 3 programmers and 2 artists. Currently, my main responsibility (next to game design which we all do together) is everything <u>networking</u> related.
-						We're using Unity's new <u>MLAPI</u> for this.<br>
-						I just ended up taking over the <u>spatial anchors</u> and managed to share AR objects, anchored in the real world, over multiple devices.
+						We were a team of 3 programmers and 2 artists. Initially, my main responsibility (next to game design which we all did together) was everything <u>networking</u> related.
+						We used the old <u>Netcode for GameObjects</u> (when it was still called MLAPI) library for this.<br><br>
+						As the project continued, I took care of the backbone while the rest focused on gameplay. I tried to make all our systems play nice together and ensured everyone's features would still work in multiplayer and AR.
+						When the project grew more stable, I also ended up making most of the logic for the HUD.
 					</p><br>
+					<h3>Videos!</h3>
+					<div class="horizontalToTVideos">
+						<h4 class="underlined" style="grid-area: label1;">Trailer</h4>
+						<h4 class="underlined" style="grid-area: label2;">Gameplay</h4>
+						<video style="grid-area: vid1; width: 100%; height: 100%; background: black;" src="Images/ToT_Trailer.mp4" alt="Game trailer" controls></video>
+						<video style="grid-area: vid2; width: 100%; height: 100%; background: black;" src="Images/ToT.mp4" alt="A gameplay video" controls muted></video>
+					</div>
 				</div>
 			</div>
 		</div>
