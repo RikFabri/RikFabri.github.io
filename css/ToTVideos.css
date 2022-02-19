@@ -20,8 +20,11 @@
         "vid1"
         "label2"
         "vid2";    
+    }
 
-
+    .horizontalToTVideos video
+    {
+        height: auto;
     }
 
     .horizontalToTVideos h4
