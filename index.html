@@ -1,17 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-209500614-1"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
-
-		gtag('config', 'UA-209500614-1');
-	</script>
-
-
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -55,6 +44,16 @@
 				<div id="SoftwareSection" class="jumpAnchor"></div>
 				<h2>Software</h2>
 				<div class="SoftwareList">
+					<a onclick="OpenModalByid('ioiModal')" class="ProjectCard" target="_blank" rel="noopener noreferrer">
+						<img src="Images/IOI.png" alt="First light, hitman and the Glacier logo" id="IOI">
+						<p>
+							I was the sole audio programmer at <b>IOI</b> for most of my career. Working on a <b>custom engine, Glacier</b>, which powers <b>Hitman, First Light and Project Fantasy.</b> This tech relies heavily on <b>Wwise</b>.
+							<!-- I have been the sole audio programmer at IOI for most of my career. This meant both supporting <b>Hitman</b> and building new tech in our <b>custom engine, Glacier,	</b> to support both <b>First Light</b> and <b>Project Fantasy</b>. I keep everything running from <b>Wwise</b> to runtime playback, and provide the core APIs to support our gameplay programmers. The sound designers also get their share of powerful tools in the form of a scripting language. -->
+						</p>
+						<div class="SoftwarePopup">
+							<iframe src="https://www.youtube.com/embed/i-fgtpwEMPM" title="007 First Light - Announcement Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+						</div>
+					</a>
 					<a onclick="OpenModalByid('tarModal')" class="ProjectCard" target="_blank" rel="noopener noreferrer">
 						<img src="Images/TugOfTar_Logo_Opac.png" alt="Tug of tar game cover" id="tot">
 						<p>
@@ -83,6 +82,13 @@
 							<img src="https://raw.githubusercontent.com/RikFabri/EasyTextures/1b04c226dc9a2faafde9069e88bb8c7cf6727f67/ReadmeAssets/EasyTextures.gif" alt="Gif of maya plugin working">
 						</div>
 					</a>
+					<a onclick="OpenModalByid('gbSoundModal')" class="ProjectCard" target="_blank" rel="noopener noreferrer">
+						<img src="Images/GameboySound.png" alt="Gameboy sound icon" id="gbSound">
+						<p>
+							<u><b>[WIP] Gameboy sound</b></u><br>
+							I'm currently researching how the gameboy played <b>sound</b> for my graduation work. The eventual goal is to add accurate sound to an existing gameboy emulator. 
+						</p>
+					</a>
 					<a onclick="OpenModalByid('noxModal');" class="ProjectCard" target="_blank" rel="noopener noreferrer">
 						<img src="Images/NoxCover.jpg" alt="Video game nox cover" id="nox">
 						<p>
@@ -102,13 +108,6 @@
 						<div class="SoftwarePopup">
 							<img src="Images/TheCrunch.gif" alt="Gif of 'The crunch' gameplay">
 						</div>
-					</a>
-					<a onclick="OpenModalByid('gbSoundModal')" class="ProjectCard" target="_blank" rel="noopener noreferrer">
-						<img src="Images/GameboySound.png" alt="Gameboy sound icon" id="gbSound">
-						<p>
-							<u><b>[WIP] Gameboy sound</b></u><br>
-							I'm currently researching how the gameboy played <b>sound</b> for my graduation work. The eventual goal is to add accurate sound to an existing gameboy emulator. 
-						</p>
 					</a>
 					<a href="WeekendProjects" class="ProjectCard" style="cursor: not-allowed; background-color: gainsboro;" onclick="return false;">
 						<img src="Images/WeekendProjectsIcon.png" alt="Weekend projects" id="WeekendProjects">
@@ -341,6 +340,39 @@
 							<li>Maximiliaan - <a href="https://maximiliaanhendrikx.myportfolio.com" target="_blank" rel="noopener noreferrer">Portfolio</a></li>
 						</ul>
 					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- IOI modal -->
+		<div class="modal" id="ioiModal">
+			<div class="modal-content">
+				<div class="modal-header">
+					<div></div><div></div>
+					<span class="modal-close">&times;</span>
+				</div>
+				<div class="modal-body">
+					<h1 class="underlined">IO Interactive</h1>
+					<p>
+						I became the sole maintainer of all <u>core audio tech</u> at IOI
+						immediately after university. Despite starting as a junior, I
+						increased stability and quickly earned the confidence of
+						my colleagues. This led to a very strong rapport with the
+						sound design team and fast-tracked my growth into
+						architectural-level decision-making.<br>
+						While it was an intense start in the industry, we have since grown to a team of three, allowing us to bounce cool ideas over lunch!
+					</p><br>
+					<h3>What I do</h3>
+					<p>
+						I am responsible for everything from a sound designer's work in <u>Wwise</u>, to its final playback at runtime.
+						This means providing a user-friendly, and more importantly, bulletproof API to our gameplay programmers as well as providing the sound designers visual scripting capabilities that bring as much freedom as possible, while introducing minimal risk. (A good system is defined, not by what it can do, but by what it can't do!)<br><br>
+						Besides <u>working together with sound design</u> to try and make their lives easier, I think my biggest mark at IOI has been in terms of <u>stability</u>.
+						Since I began my journey here, I have been steadily re-architecting the sound engine. Clearing up and solidifying interfaces, reclaiming ownership of resources audio should have never exposed and ultimately redesigning our propagation tech to be <u>concurrency-friendly</u>. My efforts brought audio from one of the most crash-prone modules, to a model of stability.
+					</p><br>
+					<h3>References</h3>
+					<p>
+						I'm sure some of our sound designers or senior programmers wouldn't mind sharing how they've experienced our collaboration. References available upon request.
+					</p><br>
 				</div>
 			</div>
 		</div>

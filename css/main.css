@@ -219,6 +219,12 @@ h2::after,
     width: 100%;
 }
 
+.SoftwarePopup iframe
+{
+    width: 100%;
+    aspect-ratio: 100 / 56;
+}
+
 .ProjectCard:hover
 {
     background-color: #dfe8f0;
